@@ -6,7 +6,7 @@ namespace BankomatClients
 {
     public class Client
     {
-        private string cardNumber; // номер кредитної картки клієнта
+        private string cardNumber;
         int id;
 
         public Client(string cardNumber) { this.cardNumber = cardNumber; }
@@ -24,14 +24,14 @@ namespace BankomatClients
         public bool CheckAccount(string cardNumber, Bank bank)
         {
             foreach (Account account in bank.Accounts)
-                if (account.AccountNumber == cardNumber) return true; // Знайдено відповідний обліковий запис
-            return false; // Обліковий запис не знайдено
+                if (account.AccountNumber == cardNumber) return true; 
+            return false;
         }
         public bool CheckPassword(string cardNumber, string password, Bank bank)
         {
             foreach (Account account in bank.Accounts)
-                if (account.AccountNumber == cardNumber && account.Password == password) return true; // Знайдено відповідний обліковий запис
-            return false; // Обліковий запис не знайдено
+                if (account.AccountNumber == cardNumber && account.Password == password) return true; 
+            return false; 
         }
         public int getInd(string cardNumber, string password, Bank bank)
         {
@@ -41,7 +41,7 @@ namespace BankomatClients
                 if (account.AccountNumber == cardNumber && account.Password == password)
                     return i;
             }
-            return -1; // Обліковий запис не знайдено
+            return -1; 
         }
     }
 }

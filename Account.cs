@@ -10,9 +10,9 @@ namespace BankomatAccounts
 {
     public class Account
     {
-        private string accountNumber; // номер рахунку клієнта
-        private string password; // пароль рахунку клієнта
-        private double balance; // поточний баланс рахунку клієнта
+        private string accountNumber; 
+        private string password; 
+        private double balance; 
         public Account() : this("no set", "no set", 0) {}
         public Account(string accountNumber, string password, double balance)
         {
